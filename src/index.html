@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanka Econo View - Sri Lankan Economic Dashboard</title>
+    <meta name="description" content="Track Sri Lanka's economic pulse in real-time. Monitor GDP, inflation, exchange rates, and achieve your personal financial goals with Lanka Econo View.">
+    <meta name="keywords" content="Sri Lanka economy, GDP, inflation, economic indicators, financial tracking, economic dashboard">
+    <meta name="author" content="Lanka Econo View">
+
+    <meta property="og:title" content="Lanka Econo View - Sri Lankan Economic Dashboard">
+    <meta property="og:description" content="Track Sri Lanka's economic pulse in real-time. Monitor GDP, inflation, exchange rates, and achieve your personal financial goals.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lanka Econo View - Sri Lankan Economic Dashboard">
+    <meta name="twitter:description" content="Track Sri Lanka's economic pulse in real-time. Monitor macro indicators and achieve financial goals.">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+     
+    <!-- Splash Screen -->
+  <div id="splash">
+    <div class="splash-content">
+      <h1>Welcome To Lanka Econo View Mobile</h1>
+    </div>
+  </div>
+
+  
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="assets/hero-economic-dashboard.jpg" alt="Sri Lankan Economic Dashboard" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-icons">
+                <div class="hero-icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <div class="hero-icon">
+                    <i data-lucide="bar-chart-3"></i>
+                </div>
+                <div class="hero-icon">
+                    <i data-lucide="globe"></i>
+                </div>
+            </div>
+
+            <h1 class="hero-title">
+                Lanka
+                <span class="hero-title-gradient">Econo</span>
+                <br>
+                View
+            </h1>
+
+            <p class="hero-description">
+                Track Sri Lanka's economic pulse in real-time. Monitor macro indicators, 
+                analyze trends, and achieve your personal financial goals.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    <i data-lucide="target"></i>
+                    Start Tracking
+                </button>
+                <button class="btn btn-outline">
+                    View Dashboard
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">8.2%</div>
+                    <div class="stat-label">GDP Growth</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2.1%</div>
+                    <div class="stat-label">Inflation Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">320</div>
+                    <div class="stat-label">LKR/USD</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">5.5%</div>
+                    <div class="stat-label">Unemployment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economic Indicators -->
+    <section class="indicators-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Economic Indicators</h2>
+                <p>Real-time tracking of Sri Lanka's key economic metrics and performance indicators</p>
+            </div>
+
+            <div class="indicators-grid" id="indicators-grid">
+                <!-- Indicators will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization -->
+    <section class="visualization-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Economic Data Visualization</h2>
+                <p>Interactive charts showing economic trends, sector breakdowns, and comparative analysis</p>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-list">
+                    <button class="tab-trigger active" data-tab="gdp">GDP Growth</button>
+                    <button class="tab-trigger" data-tab="inflation">Inflation</button>
+                    <button class="tab-trigger" data-tab="sectors">Sectors</button>
+                    <button class="tab-trigger" data-tab="trade">Trade</button>
+                </div>
+
+                <div class="tab-content active" id="gdp">
+                    <div class="chart-card">
+                        <h3>GDP Growth Trend (USD Billion)</h3>
+                        <canvas id="gdpChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="inflation">
+                    <div class="chart-card">
+                        <h3>Inflation Rate Decline (%)</h3>
+                        <canvas id="inflationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="sectors">
+                    <div class="chart-card">
+                        <h3>GDP by Sector (%)</h3>
+                        <canvas id="sectorsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="trade">
+                    <div class="chart-card">
+                        <h3>Exports vs Imports (USD Million)</h3>
+                        <canvas id="tradeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Tracker -->
+    <section class="tracker-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Personal Progress Tracker</h2>
+                <p>Set financial goals, track your progress, and compare with national economic indicators</p>
+            </div>
+
+            <div class="tracker-grid">
+                <div class="goals-list" id="goals-list">
+                    <!-- Goals will be populated by JavaScript -->
+                </div>
+
+                <div class="tracker-sidebar">
+                    <div class="card">
+                        <h3 class="card-title">
+                            <i data-lucide="plus-circle"></i>
+                            Add New Goal
+                        </h3>
+                        
+                        <form id="goal-form" class="goal-form">
+                            <div class="form-group">
+                                <label for="goal-title">Goal Title</label>
+                                <input type="text" id="goal-title" placeholder="e.g., Emergency Fund" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="goal-target">Target Amount (LKR)</label>
+                                <input type="number" id="goal-target" placeholder="500000" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="goal-category">Category</label>
+                                <select id="goal-category">
+                                    <option value="savings">Savings</option>
+                                    <option value="income">Income</option>
+                                    <option value="investment">Investment</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="goal-deadline">Deadline</label>
+                                <input type="date" id="goal-deadline" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Add Goal</button>
+                        </form>
+                    </div>
+
+                    <div class="card">
+                        <h3>Your Financial Health</h3>
+                        <div class="stats-list" id="financial-stats">
+                            <!-- Stats will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
